@@ -28,7 +28,7 @@ const addTask = () => {
     <button class="delete text-light w-100 rounded-1 border-0 pt-2 pb-2 ps-3 pe-3">
         DEL
     </button>
-</div>`;
+</div>`; 
 
     tasksContainer.insertAdjacentHTML("beforeend", task);
 
@@ -42,6 +42,7 @@ const addTask = () => {
             }else {
                 taskCount -= 1;
             }
+            taskCount -= 1;
             displayCount(taskCount);
         };
     });
@@ -50,7 +51,7 @@ const addTask = () => {
     editButtons.forEach((editBtn) => {
         editBtn.onclick = (e) => {
             let targetElement = e.target;
-            if (!(e.target.className == "edit")) {
+            if (!(e.target.className !== "edit")) {
                 targetElement = e.target.parentElement;
             }
 
@@ -63,7 +64,7 @@ const addTask = () => {
 
     const tasksCheck = document.querySelectorAll(".task-check");
     tasksCheck.forEach((checkBox) => {
-        checkBox.onchange = () => {
+        checkBox.onChange = () => {
             checkBox.nextElementSibling.classList.toggle("completed");
             if (checkBox.checked) {
                 taskCount -= 1;
@@ -73,7 +74,7 @@ const addTask = () => {
 
             displayCount(taskCount);
         };
-    });
+    }); 
 
     taskCount += 1;
     displayCount(taskCount);
@@ -86,4 +87,4 @@ window.onload = () => {
     taskCount = 0;
     displayCount(taskCount);
     newTaskInput.value = "";
-}
+};
