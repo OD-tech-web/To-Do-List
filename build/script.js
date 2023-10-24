@@ -42,7 +42,7 @@ const addTask = () => {
             }else {
                 taskCount -= 1;
             }
-            taskCount -= 1;
+            
             displayCount(taskCount);
         };
     });
@@ -64,7 +64,7 @@ const addTask = () => {
 
     const tasksCheck = document.querySelectorAll(".task-check");
     tasksCheck.forEach((checkBox) => {
-        checkBox.onChange = () => {
+        checkBox.onchange = () => {
             checkBox.nextElementSibling.classList.toggle("completed");
             if (checkBox.checked) {
                 taskCount -= 1;
