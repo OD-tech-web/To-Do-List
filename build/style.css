@@ -26,6 +26,7 @@ h4 {
 }
 
 .app {
+    width: 90%;
     font-family: "Poppins", sans-serif;
     border: 2px solid var(--dark);
     background: var(--light);
@@ -133,6 +134,12 @@ button {
 .completed {
     text-decoration: line-through;
     color: #a0a0a0;
+}
+
+@media only screen and (max-width: 374px) {
+    .app {
+        width: 95%;
+    }
 }
 
 @media only screen and (min-width: 768px) {
