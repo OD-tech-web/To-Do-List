@@ -57,7 +57,7 @@ const addTask = () => {
 
             newTaskInput.value = targetElement.previousElementSibling?.innerText;
             targetElement.parentNode.remove();
-            taskCount -= 1;
+            taskCount = 0;
             displayCount(taskCount);
         };
     });
